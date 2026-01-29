@@ -22,7 +22,7 @@ The code reads the following environment variables (and will error out if requir
 
 - **`HOM_GLORYS_05_H5_DIR`**: global GLORYS directory containing `GLORYS_05_<YEAR>.h5`
 - **`HOM_GLORYS_REGIONAL_025_H5_DIR`**: regional directory containing `GLORYS_pc_025_<YEAR>.h5` (regional experiment)
-- **`HOM_REGIONAL_MERGED_RESULTS_DIR`**: optional merged forecast directory used by the regional dataloader
+- **`HOM_REGIONAL_MERGED_RESULTS_DIR`**: global low-res simulation results for driving the regional forecast (regional experiment)
 - **`HOM_ERA5_MEAN_SURFACE_DIR`**: required when `forcing_type: 'WenHai'`, containing `WenHai_forcing_05_<YEAR>.h5`
 - **`HOM_CLIMATE_MEAN_NPY`**: required when `mean_field: true`, pointing to `climate_mean_s_t_ssh.npy`
 
