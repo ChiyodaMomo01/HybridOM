@@ -1,4 +1,4 @@
-# HybridOM (paper code release)
+# HybridOM
 
 This repository contains the official training/inference code used in our paper, focusing on:
 
