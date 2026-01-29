@@ -1,0 +1,109 @@
+# config.yaml
+selected_model: HOM
+
+models:
+  HOM:
+    # --- Normalization Constants ---
+    normalization:
+      div: [
+        0.5828150954214903, 
+        0.32081668049311035, 
+        0.14731300278327022,
+        0.11227744424227674, 
+        0.06426613855425986
+      ]
+      sub: [
+        0.3891843901814305, 
+        -0.029435820951114022, 
+        286.4926270135644
+      ]
+      div_last: [
+        6.034802696072576, 
+        5.416111672926835, 
+        7.628441970823414
+      ]
+
+    odm_params_ilap:
+      shape_in: [1, 75, 360, 720]
+      embed_dim: 256 
+      output_channels: 75
+      latent_dim: 512
+      num_spatial_layers: 6 
+      num_temporal_layers: 4 #4
+      Global_Branch: True
+      Local_Branch: True
+    
+    odm_params_state:
+      shape_in: [1, 99, 360, 720]
+      embed_dim: 256 
+      output_channels: 99 
+      latent_dim: 512
+      num_spatial_layers: 4 
+      num_temporal_layers: 8
+      Global_Branch: True
+      Local_Branch: True
+    
+    hybridom_params:
+      res: 0.5
+      H: 360
+      W: 720
+      D: 23
+      t_mask_s: 320
+      t_mask_e: 400
+      R: 6371000
+      rho0: 1025.0
+      g: 9.81
+      Omega: 7.292115e-5
+      dt: 7200
+      N_step: 12
+      ds_factor: 1
+      W_s: 40
+    
+    data_params:
+      # Use environment variables to point to your local dataset.
+      # If you don't use CMEMS initialization, cmems_path can be any valid NetCDF file path required by your workflow.
+      mask_path: './data/mask_05.npy'
+      mask_ori_path: './data/mask_05_ori.npy'
+      cmems_path: './data/cmems_init_example.nc'
+
+
+trainings:
+  HOM:
+    seed: 42
+    parallel_method: DistributedDataParallel
+    batch_size: 1
+    num_workers: 1
+    init_lr: 1e-3
+    lr_step_size: 10
+    lr_gamma: 0.2
+    num_steps_train: 30
+    num_epochs: 50
+    
+    # --- Forcing Data Configuration ---
+    # Options: 'NeuralOM' (Default, old behavior) or 'WenHai' (New ERA5 data)
+    forcing_type: 'NeuralOM'  
+    forcing_path: './data/forcing/ERA5_mean_surface'
+
+    # --- Integration Settings ---
+    integral_interval: 5           # Steps for training (n)
+    integral_interval_test: 1     # Steps for testing
+    
+    # --- Fine-Tuning Settings ---
+    fine_tune: False
+    fine_tune_lr: 1e-4
+    pre_trained_path_ilap: './checkpoints/ilap_5_step_supervised_best_model.pth'
+    pre_trained_path_state: './checkpoints/hom_05_23layer_best_model.pth'
+
+    mean_field: False
+
+datas:
+  HOM:
+    data_path: './data'
+    boundary_path: './mask.npy'
+
+loggings:
+  HOM:
+    backbone: 'hom_time_test'
+    log_dir: ./logs
+    checkpoint_dir: ./checkpoints
+    result_dir: ./results
