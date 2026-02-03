@@ -7,9 +7,6 @@ This repository contains the official training/inference code used in our paper,
 
 All hard-coded personal/cluster paths have been removed for open-sourcing. Please configure data locations via **environment variables** and/or per-experiment `config.yaml`.
 
----
-> **We are currently organizing the repository for public release. The complete source code, including auxiliary scripts and full documentation, will be uploaded progressively in the coming days.**
-
 ## Abstract
 
 Global ocean modeling is vital for climate science but struggles to balance computational efficiency with accuracy. Traditional numerical solvers are accurate but computationally expensive, while pure deep learning approaches, though fast, often lack physical consistency and long-term stability. To address this, we introduce HybridOM, a framework integrating a lightweight, differentiable numerical solver as a skeleton to enforce physical laws, with a neural network as the flesh to correct subgrid-scale dynamics. To enable efficient high-resolution modeling, we further introduce a physics-informed regional downscaling mechanism based on flux gating. This design achieves the inference efficiency of AI-based methods while preserving the accuracy and robustness of physical models. Extensive experiments on the GLORYS12V1 and OceanBench dataset validate HybridOM's performance in two distinct regimes: long-term subseasonal-to-seasonal simulation and short-term operational forecasting coupled with the FuXi-2.0 weather model. Results demonstrate that HybridOM achieves state-of-the-art accuracy while strictly maintaining physical consistency, offering a robust solution for next-generation ocean digital twins.
