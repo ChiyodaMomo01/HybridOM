@@ -78,3 +78,13 @@ cd exp_spatial_highres
 torchrun --standalone --nproc_per_node 8 inference_hom.py
 ```
 
+### Baseline Models in Our Global/Regional Simulations
+
+Most baseline implementations are derived from the following open-source libraries:
+
+- [TurbL1_AI4Science](https://github.com/easylearningscores/TurbL1_AI4Science)
+- [OpenSTL](https://github.com/chengtan9907/OpenSTL)
+- [ConvolutionalNeuralOperator](https://github.com/camlab-ethz/ConvolutionalNeuralOperator)
+- [Latent-Spectral-Models](https://github.com/thuml/Latent-Spectral-Models)
+- [PastNet](https://github.com/easylearningscores/PastNet)
+- [DiT](https://github.com/facebookresearch/DiT)
