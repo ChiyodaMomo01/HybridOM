@@ -84,7 +84,11 @@ Most baseline implementations are derived from the following open-source librari
 
 - [TurbL1_AI4Science](https://github.com/easylearningscores/TurbL1_AI4Science)
 - [OpenSTL](https://github.com/chengtan9907/OpenSTL)
-- [ConvolutionalNeuralOperator](https://github.com/camlab-ethz/ConvolutionalNeuralOperator)
-- [Latent-Spectral-Models](https://github.com/thuml/Latent-Spectral-Models)
 - [PastNet](https://github.com/easylearningscores/PastNet)
 - [DiT](https://github.com/facebookresearch/DiT)
+- [FourcastNet](https://github.com/NVlabs/FourCastNet)
+- [NeuralOM](https://github.com/YuanGao-YG/NeuralOM)
+- [WenHai](https://github.com/Cuiyingzhe/WenHai)
+- [OneForecast](https://github.com/YuanGao-YG/OneForecast)
+- [GraphCast](https://github.com/google-deepmind/graphcast)
+- [OceanBench](https://github.com/mercator-ocean/oceanbench)
