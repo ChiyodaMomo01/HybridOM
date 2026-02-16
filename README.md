@@ -1,8 +1,6 @@
 # HybridOM
 
 > **📢 Note:** This work is currently under review. The **full codebase, model checkpoints, and sample data** will be made publicly available upon the formal acceptance and publication of the paper.
-> 
-> **📧 Contact:** If you are interested in our work, we welcome further discussion and potential collaboration. Please feel free to reach out to us at srq24@mails.tsinghua.edu.cn.
 
 This repository contains the official training/inference code used in our paper, focusing on:
 
