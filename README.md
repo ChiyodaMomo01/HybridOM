@@ -1,5 +1,7 @@
 # HybridOM
 
+> **📢 Note:** This work is currently under review. The **full codebase, model checkpoints, and sample data** will be made publicly available upon the formal acceptance and publication of the paper.
+
 This repository contains the official training/inference code used in our paper, focusing on:
 
 - **0.5° global experiment**: `exp_main_05/`
