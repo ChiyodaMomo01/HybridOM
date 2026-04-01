@@ -75,3 +75,18 @@ export HOM_GLORYS_REGIONAL_025_H5_DIR="/path/to/GLORYS/regional_025/h5_dir"
 cd exp_spatial_highres
 torchrun --standalone --nproc_per_node 8 inference_hom.py
 ```
+
+### Baseline Models in Our Global/Regional Simulations
+
+Most baseline implementations are derived from the following open-source libraries:
+
+- [TurbL1_AI4Science](https://github.com/easylearningscores/TurbL1_AI4Science)
+- [OpenSTL](https://github.com/chengtan9907/OpenSTL)
+- [PastNet](https://github.com/easylearningscores/PastNet)
+- [DiT](https://github.com/facebookresearch/DiT)
+- [FourcastNet](https://github.com/NVlabs/FourCastNet)
+- [NeuralOM](https://github.com/YuanGao-YG/NeuralOM)
+- [WenHai](https://github.com/Cuiyingzhe/WenHai)
+- [OneForecast](https://github.com/YuanGao-YG/OneForecast)
+- [GraphCast](https://github.com/google-deepmind/graphcast)
+- [OceanBench](https://github.com/mercator-ocean/oceanbench)
