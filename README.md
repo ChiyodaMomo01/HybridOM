@@ -1,4 +1,4 @@
-# <p align="center">HybridOM</p>
+# <p align="center">🌊 HybridOM</p>
 
 <p align="center">
   <b>Hybrid Physics-Based and Data-Driven Global Ocean Modeling with Efficient Spatial Downscaling</b>
