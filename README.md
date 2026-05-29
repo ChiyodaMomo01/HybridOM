@@ -1,7 +1,7 @@
-# <p align="center">🌊 HybridOM</p>
+<h1 align="center">🌊 HybridOM: Hybrid Physics-Based and Data-Driven Global Ocean Modeling with Efficient Spatial Downscaling</h1>
 
 <p align="center">
-  <b>Hybrid Physics-Based and Data-Driven Global Ocean Modeling with Efficient Spatial Downscaling</b>
+  <b>Official implementation of the ICML 2026 paper</b>
 </p>
 
 <p align="center">
@@ -41,7 +41,11 @@
 
 ## Abstract
 
-Global ocean modeling is vital for climate science but struggles to balance computational efficiency with accuracy. Traditional numerical solvers are accurate but computationally expensive, while pure deep learning approaches, though fast, often lack physical consistency and long-term stability. To address this, we introduce HybridOM, a framework integrating a lightweight, differentiable numerical solver as a skeleton to enforce physical laws, with a neural network as the flesh to correct subgrid-scale dynamics. To enable efficient high-resolution modeling, we further introduce a physics-informed regional downscaling mechanism based on flux gating. This design achieves the inference efficiency of AI-based methods while preserving the accuracy and robustness of physical models. Extensive experiments on the GLORYS12V1 and OceanBench dataset validate HybridOM's performance in two distinct regimes: long-term subseasonal-to-seasonal simulation and short-term operational forecasting coupled with the FuXi-2.0 weather model. Results demonstrate that HybridOM achieves state-of-the-art accuracy while strictly maintaining physical consistency, offering a robust solution for next-generation ocean digital twins. Our source code is available at https://github.com/ChiyodaMomo01/HybridOM.
+Global ocean modeling sits at the intersection of physical fidelity and practical efficiency. Classical numerical solvers provide interpretable, conservation-oriented dynamics, but high-resolution global integration remains expensive. Purely data-driven models are fast, yet can drift over long horizons or weaken key physical constraints.
+
+**HybridOM** bridges these regimes with a lightweight differentiable physical backbone and a neural residual corrector. The physical core advances large-scale ocean dynamics through explicit flux-form structure, while the learnable corrector captures unresolved subgrid processes. For regional high-resolution modeling, HybridOM further introduces **differentiable flux gating**, which transfers physically meaningful coarse-grid transport information into fine-scale simulations for efficient spatial downscaling.
+
+Experiments on the GLORYS12V1 reanalysis and the OceanBench benchmark evaluate HybridOM across long-term global simulation, FuXi-2.0-coupled operational forecasting, and regional downscaling. Results show state-of-the-art accuracy while improving key physical-consistency diagnostics, making HybridOM a scalable building block for next-generation ocean digital twin systems. Source code is available in this repository.
 
 ## News
 
